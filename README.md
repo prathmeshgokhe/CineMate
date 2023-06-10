@@ -1,28 +1,28 @@
-# ReactWeather
+# CineMate
 
-ReactWeather is a web application that displays real-time weather information using the OpenWeather API. Built with React and SCSS, it provides users with an intuitive and visually appealing interface to access weather data for different locations.
+This is a movie app built with React and SCSS that allows users to browse and search for movies using the Movie Database API.
 
 ## Features
 
-- Real-time Weather: Fetches weather data from the OpenWeather API to display current weather conditions, including temperature, humidity, wind speed, and description.
-
-- Location Search: Allows users to search for weather information by entering the name of a city or location.
-
-- Responsive Design: Offers a responsive layout that adapts to different screen sizes and devices.
+- Browse a list of popular movies
+- Search for movies by title
+- View detailed information about a movie
+- Show the rating of the movie
 
 ## Technologies Used
 
 - React: JavaScript library for building user interfaces.
 - SCSS: CSS preprocessor for styling and customizing the application's appearance.
-- OpenWeather API: API service to retrieve weather data based on location.
+- React Router (for routing)
+- The Movie Database API for fetching data of the movies.
 
 ## Installation
 
-1. Clone the repository: git clone [Github Repo link](https://github.com/your-username/reactweather.git)
-2. Navigate to the project directory: cd reactweather
+1. Clone the repository: git clone [Github Repo link](https://github.com/prathmeshgokhe/CineMate.git)
+2. Navigate to the project directory: cd Cinemate
 3. Install dependencies: npm install
-4. Obtain an API key from the OpenWeather website by creating an account.
-5. Enter your api key in tempapp.jsx url: https://api.openweathermap.org/data/2.5/weather?q=${search}&appid={your_api_key}
+4. Obtain an API key from the Movie Database website by creating an account.
+5. Enter your api key in cinema.jsx url: https://api.themoviedb.org/3/search/movie?api_key={YOUR_API_KEY}&query=${search}
 6. Start the development server: npm start
 
 ## Usage
@@ -38,5 +38,5 @@ Contributions to ReactWeather are welcome and encouraged! If you find any issues
 
 ## Acknowledgments
 
-- [OpenWeather](https://openweathermap.org/) for providing the weather data API.
+- [The Movie Database](https://www.themoviedb.org/) for providing the weather data API.
 - [React](https://react.dev/) for the JavaScript library.

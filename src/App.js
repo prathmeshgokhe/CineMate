@@ -1,10 +1,10 @@
 import './App.css';
-import Tempapp from './components/Tempapp';
+import Cinema from './components/Cinema';
 
 function App() {
   return (
     <>
-      <Tempapp />
+      <Cinema />
     </>
   );
 }

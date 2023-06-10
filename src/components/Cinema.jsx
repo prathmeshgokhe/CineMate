@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import './Styles/tempapp.scss'
+import './Styles/cinemate.scss'
 
 const Tempapp = () => {
 
-    const [city, setCity] = useState(null);
+    const [movie, setMovie] = useState(null);
     const [search, setSearch] = useState(null)
 
     useEffect(() => {
@@ -13,7 +13,7 @@ const Tempapp = () => {
             const response = await fetch(url)
             const resJson = await response.json();
             // console.log(resJson)
-            setCity(resJson)
+            setMovie(resJson)
         }
 
         fetchApi();
@@ -23,23 +23,23 @@ const Tempapp = () => {
         <div className='container'>
             <div className='main'>
                 <div className='inputData'>
-                    <input type='search' value={search} className='inputField' placeholder='Search city' onChange={(event) => { setSearch(event.target.value) }} />
+                    <input type='search' value={search} className='inputField' placeholder='Search movie' onChange={(event) => { setSearch(event.target.value) }} />
                 </div>
-                {!city ? (
+                {!movie ? (
                     <p> No Data Found</p>
                 ) : (
                     <div className='info'>
                         <div className='poster'>
                             <img
-                                src={`https://image.tmdb.org/t/p/w500/${city.results[0].poster_path}`}
+                                src={`https://image.tmdb.org/t/p/w500/${movie.results[0].poster_path}`}
                                 alt="Movie Poster"
                             />
                         </div>
-                        <h1 className='title'>{(city.results[1].title)}</h1>
+                        <h1 className='title'>{(movie.results[1].title)}</h1>
                         <div className='movie-info'>
                             <div className='hum-win'>
-                                Release Date: {(city.results[1].release_date)} <br />
-                                Vote: {(city.results[0].vote_average)}
+                                Release Date: {(movie.results[1].release_date)} <br />
+                                Vote: {(movie.results[0].vote_average)}
                             </div>
                         </div>
 
