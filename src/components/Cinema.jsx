@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './Styles/cinemate.scss'
+import { motion } from 'framer-motion'
 
 const Tempapp = () => {
 
     const [movie, setMovie] = useState(null);
     const [search, setSearch] = useState(null)
+    const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
 
@@ -42,7 +44,9 @@ const Tempapp = () => {
                                 Vote: {(movie.results[0].vote_average)}
                             </div>
                         </div>
-
+                        <div>
+                            <motion.button className='Button' onClick={() => null} whi>Read More</motion.button>
+                        </div>
                     </div>
                 )}
 
